@@ -1,0 +1,46 @@
+.dashboard-panel .panel-title {
+  display: inline-block;
+  padding: 7px 10px;
+}
+.dashboard-panel .panel-title:first-child {
+  border-radius: inherit;
+}
+
+.dashboard-panel .panel-title.active {
+  background: #fff;
+  color: #006cab;
+}
+
+.dashboard-panel .dashboard-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.dashboard-panel .icon-green {
+  fill: #147974;
+}
+
+.dashboard-panel .icon-yellow {
+  fill: #ffc700;
+}
+
+.dashboard-panel .icon-blue {
+  fill: #006cab;
+}
+
+.dashboard-panel .table td {
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+
+.dashboard-panel .table td.name {
+  width: 100%;
+  white-space: normal;
+  word-wrap: break-word;
+}
+
+.dashboard-panel .table td.name > div {
+  height: 1.571rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}

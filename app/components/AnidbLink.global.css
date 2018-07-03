@@ -1,0 +1,16 @@
+.anidb-link {
+    text-decoration: underline;
+    font-weight: bold;
+    color: #0275d8;
+    white-space: nowrap;
+}
+
+.anidb-link .icon {
+    width: 16px;
+    height: 16px;
+    margin: 0 2px 0 0;
+}
+
+.anidb-link .icon-character {
+    background: url(../icons/16-User-Item.png);
+}

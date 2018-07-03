@@ -1,0 +1,16 @@
+{
+  "name": "shoko-desktop",
+  "author": { "name": "Shoko", "email": "hidden4003@users.noreply.github.com" },
+  "productName": "shoko-desktop",
+  "version": "0.1.1",
+  "description": "Shoko Desktop",
+  "main": "./main.prod.js",
+  "scripts": {
+    "electron-rebuild": "node -r babel-register ../internals/scripts/ElectronRebuild.js",
+    "postinstall": "npm run electron-rebuild"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "roboto-fontface": "^0.8.0"
+  }
+}

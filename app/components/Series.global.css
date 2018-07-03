@@ -1,0 +1,223 @@
+body {
+    overflow: hidden;
+}
+
+.page-series {
+    height: 100%;
+    position: relative;
+}
+
+.page-series .banner {
+    height: 300px;
+    overflow: hidden;
+    z-index: -1;
+    box-shadow: rgba(0,0,0,.3) 0 2px 2px;
+}
+
+.page-series .banner img {
+    filter: brightness(50%);
+    min-width: 100%;
+}
+
+.page-series .series-title {
+    position: relative;
+    top: -85px;
+    left: 240px;
+    font-family: Roboto;
+    font-size: 13px;
+    color: white;
+    text-shadow: -2px -2px 5px #000;
+}
+
+.page-series .series-title .title {
+    font-size: 30px;
+    font-weight: bold;
+    padding-right: 10px;
+}
+
+.page-series .series-info {
+    position: relative;
+    top: -80px;
+    left: 220px;
+    font-family: Roboto;
+    font-size: 14px;
+    color: white;
+    text-shadow: -2px -2px 5px #000;
+}
+
+.page-series .series-info img {
+    padding: 0 20px;
+}
+
+.page-series .poster {
+    overflow: hidden;
+    position: absolute;
+    left: 15px;
+    top: 175px;
+    z-index: 10;
+}
+.page-series .poster img {
+    height: 300px;
+    width: 200px;
+}
+
+.page-series .series-stats {
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    top: 300px;
+    width: 225px;
+    background: #1b1f26;
+    box-shadow: 2px 0 5px -2px #000;
+    padding-top: 175px;
+    z-index: 5;
+    min-height: calc(100% - 300px);
+}
+
+.page-series .series-stats .toolbar {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.page-series .series-stats .toolbar .icon {
+    width: 16px;
+    height: 16px;
+    margin-left: 15px;
+}
+.page-series .series-stats .toolbar .icon:first-child {
+    margin-left: 0;
+}
+
+.page-series .series-stats .section {
+    text-transform: uppercase;
+    font-size: 12px;
+    color: #279ceb;
+    font-weight: bold;
+    position: relative;
+    padding-left: 25px;
+    margin: 1rem 0 1rem 15px;
+}
+.page-series .series-stats .section:first-child {
+    margin-top: 0;
+}
+.page-series .series-stats .section .icon {
+    vertical-align: baseline;
+    position: absolute;
+    left: 0;
+}
+
+.page-series .series-stats p {
+    font-size: 12px;
+    color: #fff;
+    padding-left: 18px;
+    margin: 0;
+}
+
+.page-series .series-nav {
+    margin-left: 16rem;
+    padding: 0 1rem;
+    top: -70px;
+    position: relative;
+    background: #fff;
+    box-shadow: 0 2px 5px -2px #000;
+}
+
+.page-series .series-content {
+    margin-left: 17rem;
+    margin-right: 1rem;
+    top: -55px;
+    position: relative;
+}
+
+.page-series .series-content .breadcrumb {
+    margin: 0 1rem;
+    padding: .75rem 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.page-series .series-content .nav-link {
+    text-transform: uppercase;
+}
+
+.page-series .series-content .panel-body {
+    min-height: 215px;
+    padding: 0 10px 30px 10px;
+}
+
+.page-series .series-content .tags {
+    position: absolute;
+    bottom: 10px;
+    height: 20px;
+    overflow: hidden;
+    margin-right: 10px;
+}
+
+.page-series .series-content .badge {
+    margin-right: 2px;
+}
+
+.page-series .series-episodes img {
+    max-height: 210px;
+    max-width: 360px;
+    box-shadow: #000000 0 0 5px;
+    margin-right: 15px;
+}
+
+.page-series .series-episodes .episode {
+    height: 240px;
+    padding: 15px;
+    display: flex;
+    border-bottom: 1px solid #e1e3e6;
+    overflow: hidden;
+}
+
+.page-series .series-episodes .episode .title {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.page-series .series-episodes .filters-toolbar {
+    padding: 10px 0;
+}
+
+
+.icon.icon-edit-blue {
+    background: url(../icons/16-Edit-Blue.png);
+}
+.icon.icon-tag-blue {
+    background: url(../icons/16-Tag-Blue.png);
+}
+.icon.icon-add-list {
+    background: url(../icons/16-Add-List-Blue.png);
+}
+.icon.icon-add-playlist {
+    background: url(../icons/16-Add-Playlist-Blue.png);
+}
+.icon.icon-pinned {
+    background: url(../icons/16-Pinned-Blue.png);
+}
+.icon.icon-watch {
+    width: 21px;
+    height: 14px;
+    background: url(../icons/21x14-Watch-Dark-Blue.png);
+}
+.icon.icon-file {
+    width: 14px;
+    height: 14px;
+    background: url(../icons/14-File-Dark-Blue.png);
+}
+.icon.icon-rating {
+    width: 14px;
+    height: 14px;
+    background: url(../icons/14-Rating-Dark-Blue.png);
+}
+.icon.icon-user {
+    width: 14px;
+    height: 14px;
+    background: url(../icons/14-User-Blue.png);
+}
+.icon.icon-link {
+    width: 14px;
+    height: 14px;
+    background: url(../icons/14-Link-Blue.png);
+}
