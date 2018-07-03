@@ -1,0 +1,198 @@
+body {
+    overflow: hidden;
+}
+
+.page.page-groups {
+    height: calc(100% - 60px);
+    min-height: calc(100% - 60px);
+    position: relative;
+    padding: 10px 12px;
+}
+
+.group-panel {
+    margin: 1rem 1rem 0 1rem;
+    background: #fff;
+    box-shadow: 0 0 2px 0 rgba(199,199,199,1);
+    height: 100%;
+}
+
+.group-panel .header {
+    background: #1b2433;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 14pt;
+    font-weight: bold;
+    color: #fff;
+    padding: 12px 0;
+    border-radius: 5px 5px 0 0;
+    position: relative;
+}
+
+.group-panel .header .title {
+    color: #279ceb;
+}
+
+.group-panel .header .button-container {
+    position: absolute;
+    right: 0;
+    top: 15px;
+}
+
+.group-panel .header .button {
+    margin-right: 16px;
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.group-panel .button.icon-settings {
+    background: url(../icons/16-Settings-Grey.png);
+}
+
+.group-panel .button.icon-refresh {
+    background: url(../icons/16-Refresh.png);
+}
+
+.page-groups .group-filters-panel {
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 300px;
+    background: rgba(27,36,51,0.9);
+    z-index: 1;
+    padding: 20px;
+    overflow: auto;
+}
+
+.page-groups .group-filters-panel.closed {
+    overflow-x: hidden;
+    width: 0;
+    padding: 0;
+    transition-property: width;
+    transition-duration: .5s;
+    transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+}
+
+.page-groups .group-filters-panel a {
+    color: #fff;
+    font-size: 12pt;
+    display: block;
+}
+
+.group-panel .groups-container {
+    height: 100%;
+}
+
+.group {
+    height: 244px;
+    width: 194px;
+    position: relative;
+    margin: 3px 4px;
+    background: #fff;
+    border: 1px #565656 solid;
+    border-radius: 2px;
+    box-shadow: 0 0 2px 0 rgba(199,199,199,1);
+    display: inline-block;
+}
+
+.group .title {
+    position: absolute;
+    bottom: 0;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    background: #000;
+    opacity: 0.8;
+    color: #fff;
+    width: 100%;
+    height: 50px;
+    max-height: 50px;
+}
+
+.group img {
+    width: 100%;
+    height: 100%;
+}
+
+.group .title div {
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+
+.group .title p {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 13pt;
+    line-height: 25px;
+    padding: 0 2px;
+}
+
+.group .unwatched {
+    background: #cc7b19;
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #fff;
+    padding: 0 4px;
+}
+
+.group .group-tooltip {
+    width: 400px;
+    padding: 5px;
+}
+
+.group .group-tooltip img {
+    width: 100%;
+}
+
+.group .group-tooltip .tooltip-description {
+    max-height: 12em;
+    overflow: hidden;
+}
+
+.group .group-tooltip .tooltip-tags {
+    max-height: 4em;
+    overflow: hidden;
+    padding-top: 5px;
+}
+
+.group .group-tooltip .tooltip-title {
+    font-family: Roboto;
+    font-size: 13pt;
+}
+
+.__react_component_tooltip {
+    z-index: 2000 !important;
+}
+
+.group .group-tooltip .icon {
+    width: 14px;
+    height: 14px;
+    margin: 2px 4px 0 10px;
+}
+.group .group-tooltip .anidb-link .icon {
+    margin: 0 2px 0 0;
+}
+.group .group-tooltip span:first-child .icon {
+    margin-left: 0;
+}
+.group .group-tooltip .icon-air {
+    background: url(../icons/14-Calendar-Dark-Blue.png);
+}
+.group .group-tooltip .icon-episodes {
+    background: url(../icons/16-Collection-Dark-Blue.png);
+}
+.group .group-tooltip .icon-rating {
+    background: url(../icons/14-Rating-Dark-Blue.png);
+}
+.group .group-tooltip .badge {
+    background: #006cab;
+    border-radius: 2px;
+    padding: 3px;
+    margin: 2px 5px 2px 0;
+    font-size: 13px;
+    text-transform: uppercase;
+}
