@@ -12,9 +12,9 @@ Shoko Desktop 2 is currently in **Alpha** phase of development. This means bugs,
 
 Below is one of many mockups we've created to give users an idea of what Shoko Desktop 2 will look like.
 
-You can view the rests [on our website](https://shokoanime.com/files/desktop2/v5/).
+You can view the rest of the mockups [on our website](https://shokoanime.com/files/desktop2/v5/).
 
-![Shoko Desktop 2 Mockup](https://shokoanime.com/files/clientv2/v5/Dashboard%20V1.10.png "Shoko Desktop 2 Mockup]")
+![Shoko Desktop 2 Mockup1](https://shokoanime.com/files/desktop2/v5/Dashboard%20V1.10.png "Shoko Desktop 2 Mockup")
 
 # Learn More About Shoko
 
