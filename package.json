@@ -1,8 +1,8 @@
 {
-  "name": "shoko-electron-test",
-  "productName": "shoko",
+  "name": "shoko-desktop-2",
+  "productName": "Shoko-Desktop-2",
   "version": "0.11.0",
-  "description": "Shoko Electron concept",
+  "description": "Shoko Desktop, an anime cataloging program.",
   "scripts": {
     "build": "concurrently \"npm run build-main\" \"npm run build-renderer\"",
     "build-dll": "cross-env NODE_ENV=development node --trace-warnings -r babel-register ./node_modules/webpack/bin/webpack --config webpack.config.renderer.dev.dll.js --colors",
