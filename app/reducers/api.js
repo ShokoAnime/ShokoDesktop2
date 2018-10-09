@@ -1,11 +1,15 @@
 import { handleAction } from 'redux-actions';
+import Store from 'electron-store';
+
 import { API } from '../actions/api';
+
+const store = new Store();
 
 const defaultState = {
   user: '',
   password: '',
   key: '',
-  host: 'http://127.0.0.1:8111'
+  host: store.get('api.host', 'http://127.0.0.1:8111')
 };
 
 const api = handleAction(

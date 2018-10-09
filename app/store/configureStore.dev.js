@@ -4,6 +4,8 @@ import thunk from 'redux-thunk';
 import { createHashHistory } from 'history';
 import { routerMiddleware, routerActions } from 'react-router-redux';
 import createSagaMiddleware from 'redux-saga';
+import Store from 'electron-store';
+
 import throttle from 'lodash/throttle';
 import rootReducer from '../reducers';
 import rootSaga from '../sagas';
@@ -54,12 +56,20 @@ const configureStore = initialState => {
   // Create Store
   const store = createStore(rootReducer, state, enhancer);
 
+  const settingsStore = new Store();
+
+  let previousState;
   // Save store to local storage
   store.subscribe(
     throttle(() => {
+      const apiState = store.getState().api;
+      previousState = apiState;
       saveState({
-        api: store.getState().api
+        api: apiState
       });
+      if (previousState !== apiState) {
+        settingsStore.set('api.host', apiState.host);
+      }
     }, 1000)
   );
 
