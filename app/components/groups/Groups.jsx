@@ -29,9 +29,15 @@ class Groups extends Component {
   }
 
   cellRenderer = ({index, key, style}) => {
-    const group = this.props.groups[index];
+    const { groups } = this.props;
+    const group = groups[index];
     if (group === undefined) { return undefined; }
-    return <div key={key} style={style}><Group isGroup={this.props.isGroup} key={group.id} group={group} /></div>
+    console.log(group);
+    if (group.series && group.series.count() === 1) {
+      const series = group.series.first();
+      return <div key={key} style={style}><Group isGroup={false} key={series.id} group={series} /></div>
+    }
+    return <div key={key} style={style}><Group isGroup={group.type === 'group'} key={group.id} group={group} /></div>
   }
 
   cellSizeAndPositionGetter = ({index}) => {

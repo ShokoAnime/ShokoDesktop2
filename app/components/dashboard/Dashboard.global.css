@@ -2,6 +2,11 @@
   display: inline-block;
   padding: 7px 10px;
 }
+
+.dashboard-panel.tab-panel .panel-title {
+  cursor: pointer;
+}
+
 .dashboard-panel .panel-title:first-child {
   border-radius: inherit;
 }

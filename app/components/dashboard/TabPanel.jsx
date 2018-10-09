@@ -115,7 +115,7 @@ class TabPanel extends Component {
   render() {
     const { activeTab } = this.state;
     return (
-      <div className="panel panel-dark dashboard-panel">
+      <div className="panel panel-dark dashboard-panel tab-panel">
         <div className="panel-heading">
           <h3 onClick={() => { this.setTab(1); }} className={`panel-title ${activeTab === 1?'active':''}`}>Latest items</h3>
           <h3 onClick={() => { this.setTab(2); }} className={`panel-title ${activeTab === 2?'active':''}`}>Latest series</h3>
