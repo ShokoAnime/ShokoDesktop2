@@ -57,19 +57,18 @@ const configureStore = initialState => {
   const store = createStore(rootReducer, state, enhancer);
 
   const settingsStore = new Store();
-
   let previousState;
   // Save store to local storage
   store.subscribe(
     throttle(() => {
       const apiState = store.getState().api;
-      previousState = apiState;
       saveState({
         api: apiState
       });
       if (previousState !== apiState) {
         settingsStore.set('api.host', apiState.host);
       }
+      previousState = apiState;
     }, 1000)
   );
 
