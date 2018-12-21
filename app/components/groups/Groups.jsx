@@ -32,7 +32,6 @@ class Groups extends Component {
     const { groups } = this.props;
     const group = groups[index];
     if (group === undefined) { return undefined; }
-    console.log(group);
     if (group.series && group.series.count() === 1) {
       const series = group.series.first();
       return <div key={key} style={style}><Group isGroup={false} key={series.id} group={series} /></div>
@@ -51,7 +50,7 @@ class Groups extends Component {
     return {
       height: cellHeight,
       width: cellWidth,
-      x: ((index)%6)*cellWidth,
+      x: ((index) % cellPerRow) * cellWidth,
       y: row*cellHeight
     }
   }

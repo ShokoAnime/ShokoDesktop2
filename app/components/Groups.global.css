@@ -81,7 +81,7 @@ body {
 }
 
 .group-panel .groups-container {
-    height: 100%;
+    height: calc(100% - 60px);
 }
 
 .group {
