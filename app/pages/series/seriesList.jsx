@@ -1,6 +1,6 @@
 // @flow
 import React, { Component } from 'react';
-import SeriesList from '../components/SeriesList';
+import SeriesList from '../../components/SeriesList';
 
 export default class HomePage extends Component {
   componentDidMount() {

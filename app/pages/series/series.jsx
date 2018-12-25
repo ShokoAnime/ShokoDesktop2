@@ -1,9 +1,9 @@
 // @flow
 import React, { Component } from 'react';
-import Groups from '../components/groups/Groups';
-import SiteMenuBar from '../components/SiteMenuBar';
-import SiteNavbar from '../components/SiteNavbar';
-import ErrorBoundary from '../components/ErrorBoundary';
+import Series from '../../components/Series';
+import SiteMenuBar from '../../components/SiteMenuBar';
+import SiteNavbar from '../../components/SiteNavbar';
+import ErrorBoundary from '../../components/ErrorBoundary';
 
 export default class HomePage extends Component {
   componentDidMount() {
@@ -19,7 +19,7 @@ export default class HomePage extends Component {
         <SiteNavbar />
         <SiteMenuBar />
         <ErrorBoundary>
-          <Groups {...this.props} />
+          <Series {...this.props} />
         </ErrorBoundary>
       </div>
     );
