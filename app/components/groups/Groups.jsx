@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import { Collection, AutoSizer } from 'react-virtualized';
 import { connect } from 'react-redux';
 
-import selectors from '../../orm/selectors';
+import selectors from '../../core/orm/selectors';
 import '../Groups.global.css';
-import Events from '../../events/index';
+import Events from '../../core/events/index';
 import Group from './Group';
 import Panel from './Panel';
 import Filters from './Filters';

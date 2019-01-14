@@ -7,7 +7,7 @@ import { Route } from 'react-router';
 import PropTypes from 'prop-types';
 
 import './Series.global.css';
-import Events from '../events';
+import Events from '../core/events';
 import calendarIcon from '../icons/16-Calender-Active.png';
 import collectionIcon from '../icons/16-Collection-Active.png';
 import starIcon from '../icons/16-My-Lists-Active.png';

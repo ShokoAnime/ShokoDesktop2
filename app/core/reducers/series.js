@@ -1,5 +1,5 @@
 import { handleAction } from 'redux-actions';
-import { SERIES } from '../core/actions/series';
+import { SERIES } from '../actions/series';
 
 const series = handleAction(
   SERIES,

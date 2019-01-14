@@ -1,7 +1,7 @@
 import { handleAction } from 'redux-actions';
 import Store from 'electron-store';
 
-import { API } from '../core/actions/api';
+import { API } from '../actions/api';
 
 const store = new Store();
 

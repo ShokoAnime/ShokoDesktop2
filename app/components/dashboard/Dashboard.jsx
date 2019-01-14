@@ -3,10 +3,10 @@ import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 import './Dashboard.global.css';
-import Events from '../../events';
+import Events from '../../core/events';
 import TabPanel from './TabPanel';
 import  NotificationsQueue from '../NotificationsQueue';
-import selectors from '../../orm/selectors';
+import selectors from '../../core/orm/selectors';
 
 class Dashboard extends Component {
   static propTypes = {
