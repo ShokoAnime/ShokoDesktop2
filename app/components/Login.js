@@ -1,6 +1,5 @@
 // @flow
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { forEach } from 'lodash';
 import './Login.global.css';
@@ -8,16 +7,20 @@ import Events from '../core/events';
 import NotificationsQueue from './NotificationsQueue';
 import Input from './common/textInput';
 
-class Login extends Component {
-  static propTypes = {
-    setValue: PropTypes.func.isRequired,
-    login: PropTypes.func.isRequired,
-    loginImage: PropTypes.func.isRequired,
-    isFetching: PropTypes.bool.isRequired,
-    image: PropTypes.string,
-    api: PropTypes.object.isRequired
-  };
+type Props = {
+  setValue: () => mixed,
+  login: () => mixed,
+  loginImage: () => mixed,
+  isFetching: boolean,
+  api: {},
+  image?: string
+};
 
+type State = {
+  version: string | null
+};
+
+class Login extends Component<Props, State> {
   static defaultProps = {
     image: ''
   };
