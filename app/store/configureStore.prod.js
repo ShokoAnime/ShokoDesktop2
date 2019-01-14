@@ -8,7 +8,7 @@ import throttle from 'lodash/throttle';
 import Store from 'electron-store';
 
 import rootReducer from '../reducers';
-import rootSaga from '../sagas';
+import rootSaga from '../core/sagas';
 import { saveState, loadState } from './localStorage';
 
 const sagaMiddleware = createSagaMiddleware();

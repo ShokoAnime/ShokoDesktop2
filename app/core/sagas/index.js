@@ -11,13 +11,13 @@ import { push } from 'react-router-redux';
 import { forceCheck } from 'react-lazyload';
 import { remote } from 'electron';
 
-import Events from '../events';
+import Events from '../../events';
 import Api from './api';
-import { series } from '../actions/series';
-import { api } from '../actions/api';
-import { creators as orm } from '../actions/orm';
-import uiActions from '../actions/ui';
-import dashboardActions from '../actions/dashboard';
+import { series } from '../../actions/series';
+import { api } from '../../actions/api';
+import { creators as orm } from '../../actions/orm';
+import uiActions from '../../actions/ui';
+import dashboardActions from '../../actions/dashboard';
 import watchRequests, { queueRequest } from './ApiRequestQueue';
 import notificationsWatcher, {
   queueRequest as queueNotification
