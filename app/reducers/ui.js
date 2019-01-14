@@ -1,5 +1,5 @@
 import { handleAction } from 'redux-actions';
-import { SET_UI } from '../actions/ui';
+import { SET_UI } from '../core/actions/ui';
 
 const ui = handleAction(
   SET_UI,

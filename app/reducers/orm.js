@@ -1,6 +1,6 @@
 import { forEach } from 'lodash';
 import orm from '../orm/orm';
-import Actions from '../actions/orm';
+import Actions from '../core/actions/orm';
 
 export default function ormReducer(dbState, action) {
   const session = orm.session(dbState);

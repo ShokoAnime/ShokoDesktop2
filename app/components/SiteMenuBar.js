@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import uiActions from '../actions/ui';
+import uiActions from '../core/actions/ui';
 import { ReactComponent as CollectionIcon } from '../icons/svg/collection.svg';
 import { ReactComponent as DashboardIcon } from '../icons/svg/dashboard.svg';
 

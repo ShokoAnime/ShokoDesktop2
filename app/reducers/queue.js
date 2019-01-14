@@ -7,7 +7,7 @@ import {
   API_QUEUE_UPDATE,
   NOTIFICATIONS_QUEUE_ADD,
   NOTIFICATIONS_QUEUE_REMOVE
-} from '../actions/queue';
+} from '../core/actions/queue';
 
 const api = handleActions(
   {
