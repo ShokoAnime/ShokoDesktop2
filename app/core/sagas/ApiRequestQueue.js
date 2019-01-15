@@ -9,7 +9,7 @@ import {
   actionChannel
 } from 'redux-saga/effects';
 import Base62 from 'base62';
-import Actions from '../../core/actions/queue';
+import Actions from '../actions/queue';
 
 let counter = 0;
 

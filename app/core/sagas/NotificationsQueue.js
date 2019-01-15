@@ -1,7 +1,7 @@
 import { channel, delay } from 'redux-saga';
 import { take, fork, call, put } from 'redux-saga/effects';
 import { v1 as uuid } from 'uuid';
-import Actions from '../../core/actions/queue';
+import Actions from '../actions/queue';
 
 function* watchRequests() {
   // create a channel to queue incoming requests
