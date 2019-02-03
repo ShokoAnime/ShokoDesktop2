@@ -1,22 +1,26 @@
 // @flow
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { forEach } from 'lodash';
 import './Login.global.css';
-import Events from '../events';
+import Events from '../core/events';
 import NotificationsQueue from './NotificationsQueue';
+import Input from './common/textInput';
 
-class Login extends Component {
-  static propTypes = {
-    setValue: PropTypes.func.isRequired,
-    login: PropTypes.func.isRequired,
-    loginImage: PropTypes.func.isRequired,
-    isFetching: PropTypes.bool.isRequired,
-    image: PropTypes.string,
-    api: PropTypes.object.isRequired
-  };
+type Props = {
+  setValue: () => mixed,
+  login: () => mixed,
+  loginImage: () => mixed,
+  isFetching: boolean,
+  api: {},
+  image?: string
+};
 
+type State = {
+  version: string | null
+};
+
+class Login extends Component<Props, State> {
   static defaultProps = {
     image: ''
   };
@@ -53,42 +57,33 @@ class Login extends Component {
           <h3 className="font-size-24">Welcome back</h3>
           <p>Please enter your login details below.</p>
           <form method="post" action="">
-            <div className="form-group">
-              <input
-                type="text"
-                className="form-control"
-                placeholder="Username"
-                value={user}
-                onChange={e => {
-                  setValue('user', e.target.value);
-                }}
-                onKeyPress={this.handleKeyPress}
-              />
-            </div>
-            <div className="form-group">
-              <input
-                type="password"
-                className="form-control"
-                placeholder="Password"
-                value={password}
-                onChange={e => {
-                  setValue('password', e.target.value);
-                }}
-                onKeyPress={this.handleKeyPress}
-              />
-            </div>
-            <div className="form-group">
-              <input
-                type="text"
-                className="form-control"
-                placeholder="Server address"
-                value={host}
-                onChange={e => {
-                  setValue('host', e.target.value);
-                }}
-                onKeyPress={this.handleKeyPress}
-              />
-            </div>
+            <Input
+              name="username"
+              placeholder="Username"
+              value={user}
+              onChange={e => {
+                setValue('user', e.target.value);
+              }}
+              onKeyPress={this.handleKeyPress}
+            />
+            <Input
+              name="password"
+              placeholder="Password"
+              value={password}
+              onChange={e => {
+                setValue('password', e.target.value);
+              }}
+              onKeyPress={this.handleKeyPress}
+            />
+            <Input
+              name="server"
+              placeholder="Server address"
+              value={host}
+              onChange={e => {
+                setValue('host', e.target.value);
+              }}
+              onKeyPress={this.handleKeyPress}
+            />
             <button
               disabled={isFetching}
               type="button"

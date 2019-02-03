@@ -2,8 +2,8 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import selectors from '../../orm/selectors';
-import Events from '../../events';
+import selectors from '../../core/orm/selectors';
+import Events from '../../core/events';
 
 class Panel extends PureComponent {
   static propTypes = {

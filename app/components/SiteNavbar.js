@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import Events from '../events';
+import Events from '../core/events';
 import logoImage from '../images/logo.png';
 import { ReactComponent as SearchIcon } from '../icons/svg/search.svg';
 import { ReactComponent as MinimizeWindowIcon } from '../icons/svg/windowMinimize.svg';

@@ -1,15 +1,15 @@
 /* eslint flowtype-errors/show-errors: 0 */
 import React from 'react';
 import { Switch, Route } from 'react-router';
-import App from './containers/App';
-import LoginPage from './containers/LoginPage';
-import DashboardPage from './containers/DashboardPage';
-import SeriesPage from './containers/SeriesPage';
-import GroupsPage from './containers/GroupsPage';
-import SeriesListPage from './containers/SeriesListPage';
+import LoginPage from './pages/login';
+import DashboardPage from './pages/dashboard';
+import { SeriesPage, SeriesListPage } from './pages/series';
+import GroupsPage from './pages/groups';
+
+const VirtualContainer = props => props.children;
 
 export default () => (
-  <App>
+  <VirtualContainer>
     <Switch>
       <Route exact path="/dashboard" component={DashboardPage} />
       <Route exact path="/series" component={SeriesListPage} />
@@ -19,5 +19,5 @@ export default () => (
       <Route exact path="/groups/filter/:filterId" component={GroupsPage} />
       <Route exact path="/" component={LoginPage} />
     </Switch>
-  </App>
+  </VirtualContainer>
 );

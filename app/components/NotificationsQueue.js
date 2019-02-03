@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { forEach } from 'lodash';
-import Actions from '../actions/queue';
+import Actions from '../core/actions/queue';
 
 import './NotificationsQueue.global.css';
 

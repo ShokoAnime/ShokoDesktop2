@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import { Collection, AutoSizer } from 'react-virtualized';
 import { connect } from 'react-redux';
 
-import selectors from '../../orm/selectors';
+import selectors from '../../core/orm/selectors';
 import '../Groups.global.css';
-import Events from '../../events/index';
+import Events from '../../core/events/index';
 import Group from './Group';
 import Panel from './Panel';
 import Filters from './Filters';
@@ -32,7 +32,6 @@ class Groups extends Component {
     const { groups } = this.props;
     const group = groups[index];
     if (group === undefined) { return undefined; }
-    console.log(group);
     if (group.series && group.series.count() === 1) {
       const series = group.series.first();
       return <div key={key} style={style}><Group isGroup={false} key={series.id} group={series} /></div>
@@ -51,7 +50,7 @@ class Groups extends Component {
     return {
       height: cellHeight,
       width: cellWidth,
-      x: ((index)%6)*cellWidth,
+      x: ((index) % cellPerRow) * cellWidth,
       y: row*cellHeight
     }
   }

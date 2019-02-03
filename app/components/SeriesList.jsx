@@ -6,7 +6,7 @@ import { connect } from 'react-redux';
 import './Groups.global.css';
 import SiteMenuBar from './SiteMenuBar';
 import SiteNavbar from './SiteNavbar';
-import Events from '../events/index';
+import Events from '../core/events/index';
 import Group from './groups/Group';
 
 class SeriesList extends Component {
